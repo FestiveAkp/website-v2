@@ -1,8 +1,11 @@
 <template>
-    <section class="bg-primary-bg h-screen relative flex justify-center items-center p-9">
+    <section id="home" class="bg-primary-bg h-screen relative flex justify-center items-center p-9">
         <div id="animated" class="invisible flex justify-center">
+            <div class="absolute lg:fixed top-0 left-0 mt-6 ml-8">
+                <div class="bar h-2 w-40 bg-gray-600 hover:bg-gray-500" @click="() => jumpTo('#home')" />
+                <div class="bar h-2 w-28 bg-gray-600 hover:bg-gray-500 mt-2" @click="() => jumpTo('#projects')" />
+            </div>
             <div>
-                <!-- <h1 id="name" class="text-5xl md:text-8xl font-knewave text-primary tracking-wide">Akash Pillai</h1> -->
                 <h1 id="name" class="text-5xl md:text-8xl font-fredoka-one text-primary tracking-wide">Akash Pillai</h1>
                 <div id="links" class="mt-12 flex justify-between max-w-sm">
                     <LinkButton title="GitHub" link="https://github.com/FestiveAkp">
@@ -26,7 +29,7 @@
             </div>
         </div>
     </section>
-    <section class="bg-purple-100 flex justify-center p-9">
+    <section id="projects" class="bg-purple-100 flex justify-center p-9">
         <div class="max-w-3xl">
             <h2 class="text-2xl font-semibold">Projects</h2>
             <div class="h-px bg-purple-200 mt-3" />
@@ -106,19 +109,34 @@
     import EmailArrowIcon from './components/icons/EmailArrowIcon.vue';
     import ProjectCard from './components/ProjectCard.vue';
 
+    // Helper to smooth scroll to different sections of the document
+    const jumpTo = elem => document.querySelector(elem).scrollIntoView({ behavior: 'smooth' });
 
+    // Piecewise animation routine
     const animate = () => {
-    gsap
-        .timeline()
-        .from('#animated', { ease: 'linear', autoAlpha: 0 })
-        .from('#name', { duration: 0.75, x: -100, opacity: 0, ease: 'expo.out' })
-        .from('#links', { duration: 0.75, x: -100, opacity: 0, ease: 'expo.out' })
-        .from('#scroll-hint', { duration: .75, y: 50, opacity: 0, ease: 'expo.out' })
-        .to('#down-arrow', { duration: 0.4, y: 10, ease: 'power4.in' })
-        .to('#down-arrow', { duration: 0.5, y: 0, ease: 'expo.out' })
+        gsap.timeline()
+            .from('#animated', { autoAlpha: 0 })
+            .from('#name', { duration: 0.75, x: -100, opacity: 0, ease: 'expo.out' })
+            .from('#links', { duration: 0.75, x: -100, opacity: 0, ease: 'expo.out' })
+            .from('.bar', { x: -200, ease: 'expo.out', stagger: .2 })
+            .from('#scroll-hint', { duration: .75, y: 50, opacity: 0, ease: 'expo.out' })
+            .to('#down-arrow', { duration: 0.4, y: 10, ease: 'power4.in' })
+            .to('#down-arrow', { duration: 0.5, y: 0, ease: 'expo.out' });
     }
 
+    // Fade everything in quickly
+    const show = () => {
+        gsap.timeline()
+            .from('#animated', { autoAlpha: 0 });
+    }
+
+    // Do animations after page has fully loaded
     window.addEventListener('load', () => {
-        animate();
+        if (window.scrollY === 0) {
+            animate();
+        } else {
+            // Don't do full animation if user has scrolled down already
+            show();
+        }
     });
 </script>
