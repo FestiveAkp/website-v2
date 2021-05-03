@@ -47,7 +47,7 @@
                     tools="Vue – Tailwind CSS – GSAP – Vite"
                     description="This website. Fully redesigned with colors and buttons taken from the first iteration."
                     view="https://akash.dev/"
-                    code="#"
+                    code="https://github.com/FestiveAkp/website-v2"
                 />
                 <ProjectCard
                     title="Decader"
@@ -85,8 +85,7 @@
                     title="Personal Website v1"
                     tools="11ty – Handlebars – Tailwind CSS – Matter.js"
                     description="The first iteration of my personal website."
-                    view="#"
-                    code="#"
+                    code="https://github.com/FestiveAkp/website"
                 />
                 <ProjectCard
                     title="RPS"
