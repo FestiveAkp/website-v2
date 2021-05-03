@@ -5,21 +5,21 @@
                 <div class="bar h-2 w-40 bg-gray-600 hover:bg-gray-500" @click="() => jumpTo('#home')" />
                 <div class="bar h-2 w-28 bg-gray-600 hover:bg-gray-500 mt-2" @click="() => jumpTo('#projects')" />
             </div>
+            <div id="contact" class="absolute top-0 right-0 mt-6 mr-8">
+                <LinkButton title="Let's get in touch!" link="mailto:apilla20@uic.edu">Contact</LinkButton>
+            </div>
             <div>
                 <h1 id="name" class="text-5xl md:text-8xl font-fredoka-one text-primary tracking-wide">Akash Pillai</h1>
-                <div id="links" class="mt-12 flex justify-between max-w-sm">
-                    <LinkButton title="GitHub" link="https://github.com/FestiveAkp">
+                <div id="links" class="mt-12 flex justify-around">
+                    <MediaButton title="GitHub" link="https://github.com/FestiveAkp">
                         <GithubIcon />
-                    </LinkButton>
-                    <LinkButton title="CodeSandbox" link="https://codesandbox.io/u/FestiveAkp">
+                    </MediaButton>
+                    <MediaButton title="CodeSandbox" link="https://codesandbox.io/u/FestiveAkp">
                         <BracketsIcon />
-                    </LinkButton>
-                    <LinkButton title="LinkedIn" link="https://www.linkedin.com/in/akash-pillai-/">
+                    </MediaButton>
+                    <MediaButton title="LinkedIn" link="https://www.linkedin.com/in/akash-pillai-/">
                         <LinkedInIcon />
-                    </LinkButton>
-                    <LinkButton title="Email Me" link="mailto:apilla20@uic.edu">
-                        <EmailArrowIcon />
-                    </LinkButton>
+                    </MediaButton>
                 </div>
             </div>
             <div id="scroll-hint" class="absolute bottom-6 flex flex-col items-center text-gray-300">
@@ -103,6 +103,7 @@
 <script setup>
     import { gsap } from 'gsap';
     import LinkButton from './components/LinkButton.vue';
+    import MediaButton from './components/MediaButton.vue';
     import GithubIcon from './components/icons/GitHubIcon.vue';
     import BracketsIcon from './components/icons/BracketsIcon.vue';
     import LinkedInIcon from './components/icons/LinkedInIcon.vue';
@@ -117,10 +118,11 @@
         gsap.timeline()
             .from('#animated', { autoAlpha: 0 })
             .from('#name', { duration: 0.75, x: -100, opacity: 0, ease: 'expo.out' })
-            .from('#links', { duration: 0.75, x: -100, opacity: 0, ease: 'expo.out' })
-            .from('.bar', { x: -200, ease: 'expo.out', stagger: .2 })
-            .from('#scroll-hint', { duration: .75, y: 50, opacity: 0, ease: 'expo.out' })
-            .to('#down-arrow', { duration: 0.4, y: 10, ease: 'power4.in' })
+            .from('#links', { duration: 0.75, x: -100, opacity: 0, ease: 'expo.out' }, '-=0.55')
+            .from('.bar', { x: -200, ease: 'expo.out', stagger: .2 }, '-=0.45')
+            .from('#contact', { y: -200, ease: 'expo.out' }, '-=0.75')
+            .from('#scroll-hint', { duration: 0.75, y: 50, opacity: 0, ease: 'expo.out' }, '-=0.4')
+            .to('#down-arrow', { duration: 0.4, y: 10, ease: 'power4.in' }, '-=0.2')
             .to('#down-arrow', { duration: 0.5, y: 0, ease: 'expo.out' });
     }
 

@@ -1,14 +1,14 @@
 <template>
     <a
-        class="flex items-center border border-primary rounded text-primary-bg bg-primary px-3 py-2 focus:shadow-outline"
+        class="inline-block rounded text-primary px-3 py-3 hover:bg-primary hover:text-primary-bg focus:shadow-outline"
         :href="props.link"
         :title="props.title"
         target="_blank"
         rel="noopener noreferrer"
     >
-        <span class="font-semibold tracking-wide leading-tight">
+        <svg class="w-7 md:w-8"  viewBox="0 0 24 24">
             <slot></slot>
-        </span>
+        </svg>
     </a>
 </template>
 
@@ -18,5 +18,5 @@
         link: String
     });
 
-    // SLot is for button text
+    // Slot is for button icon SVG path element
 </script>
