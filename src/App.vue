@@ -1,9 +1,14 @@
 <template>
     <section id="home" class="bg-primary-bg h-screen relative flex justify-center items-center p-9">
+        <div class="loading absolute flex space-x-4">
+            <div id="loading-1" class="h-3 w-3 rounded-sm bg-gray-600" />
+            <div id="loading-2" class="h-3 w-3 rounded-sm bg-gray-600" />
+            <div id="loading-3" class="h-3 w-3 rounded-sm bg-gray-600" />
+        </div>
         <div id="animated" class="invisible flex justify-center">
             <div class="absolute lg:fixed top-0 left-0 mt-6 ml-8">
-                <div class="bar h-2 w-40 bg-gray-600 hover:bg-gray-500" @click="() => jumpTo('#home')" />
-                <div class="bar h-2 w-28 bg-gray-600 hover:bg-gray-500 mt-2" @click="() => jumpTo('#projects')" />
+                <div class="bar h-2 w-40 rounded-sm bg-gray-600 hover:bg-gray-500" @click="() => jumpTo('#home')" />
+                <div class="bar h-2 w-28 rounded-sm bg-gray-600 hover:bg-gray-500 mt-2" @click="() => jumpTo('#projects')" />
             </div>
             <div id="contact" class="absolute top-0 right-0 mt-6 mr-8">
                 <LinkButton title="Let's get in touch!" link="mailto:apilla20@uic.edu">Contact</LinkButton>
@@ -100,6 +105,7 @@
 </template>
 
 <script setup>
+    import { onMounted } from 'vue';
     import { gsap } from 'gsap';
     import LinkButton from './components/LinkButton.vue';
     import MediaButton from './components/MediaButton.vue';
@@ -111,6 +117,29 @@
 
     // Helper to smooth scroll to different sections of the document
     const jumpTo = elem => document.querySelector(elem).scrollIntoView({ behavior: 'smooth' });
+
+    // Loading animation while assets are being fetched
+    const startLoading = () => {
+        const distance = 7;
+        const duration = 0.2;
+        const ease = 'power2.out';
+        gsap.timeline({ repeat: -1 })
+            .to('#loading-1', { duration, y: -distance, ease })
+            .to('#loading-1', { duration, y: 0, ease })
+            .to('#loading-2', { duration, y: -distance, ease })
+            .to('#loading-2', { duration, y: 0, ease })
+            .to('#loading-3', { duration, y: -distance, ease })
+            .to('#loading-3', { duration, y: 0, ease })
+    }
+
+    // Hide the loading animation and clean up afterwards
+    const stopLoading = () => {
+        gsap.to('.loading', { duration: 0.4, opacity: 0 });
+
+        setTimeout(() => {
+            document.querySelector('.loading').remove();
+        }, 3000);
+    }
 
     // Piecewise animation routine
     const animate = () => {
@@ -127,17 +156,21 @@
 
     // Fade everything in quickly
     const show = () => {
-        gsap.timeline()
-            .from('#animated', { autoAlpha: 0 });
+        gsap.from('#animated', { autoAlpha: 0 });
     }
 
-    // Do animations after page has fully loaded
+    // Do main animation after page has fully loaded
     window.addEventListener('load', () => {
+        stopLoading();
+
+        // Don't do full animation if user has scrolled down already
         if (window.scrollY === 0) {
             animate();
         } else {
-            // Don't do full animation if user has scrolled down already
             show();
         }
     });
+
+    // Start loading animation
+    onMounted(() => startLoading());
 </script>
