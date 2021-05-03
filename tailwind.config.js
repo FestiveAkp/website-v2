@@ -8,7 +8,6 @@ module.exports = {
                 'primary-bg': '#211D27'
             },
             fontFamily: {
-                'knewave': ['Knewave', 'cursive'],
                 'fredoka-one': ['Fredoka One', 'cursive'],
             },
         },
