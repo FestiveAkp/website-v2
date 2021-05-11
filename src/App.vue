@@ -55,15 +55,11 @@
                     code="https://github.com/FestiveAkp/website-v2"
                 />
                 <ProjectCard
-                    title="Decader"
-                    tools="Unity (C#)"
-                    description="The final project for CS 426 – Video Game Design and Development, made by an interdisciplinary team of 2 Computer Science students and 1 Design student. You click on an advertisement online for a time-traveling bracelet and suddenly get sent back in time! You must pass through the different decades (the '90s and '80s), collect objects and fight enemies so you can return home."
-                />
-                <ProjectCard
-                    title="Memeflix"
-                    tools="Flutter – Firebase"
-                    description="A meme generator mobile app which uses high resolution movie images from the TMDb API, showing memes from different users in a public feed. Group project made during the PickHacks 2021 Hackathon."
-                    code="https://github.com/SunveerSingh/memeflix"
+                    title="Gradient Clock"
+                    tools="React – Next.js – Granim.js – Chakra UI – GitHub Pages"
+                    description="A simple date and time display in front of a colorful moving gradient."
+                    view="https://akash.dev/clock/"
+                    code="https://github.com/FestiveAkp/clock"
                 />
                 <ProjectCard
                     title="Anime Tracker"
@@ -73,11 +69,15 @@
                     code="https://github.com/FestiveAkp/animetracker"
                 />
                 <ProjectCard
-                    title="Gradient Clock"
-                    tools="React – Next.js – Granim.js – Chakra UI – GitHub Pages"
-                    description="A simple date and time display in front of a colorful moving gradient."
-                    view="https://akash.dev/clock/"
-                    code="https://github.com/FestiveAkp/clock"
+                    title="Decader"
+                    tools="Unity (C#)"
+                    description="The final project for CS 426 – Video Game Design and Development, made by an interdisciplinary team of 2 Computer Science students and 1 Design student. You click on an advertisement online for a time-traveling bracelet and suddenly get sent back in time! You must pass through the different decades (the '90s and '80s), collect objects and fight enemies so you can return home."
+                />
+                <ProjectCard
+                    title="Memeflix"
+                    tools="Flutter – Firebase"
+                    description="A meme generator mobile app which uses high resolution movie images from the TMDb API, showing memes from different users in a public feed. Group project made during the PickHacks 2021 Hackathon."
+                    code="https://github.com/SunveerSingh/memeflix"
                 />
                 <ProjectCard
                     title="IT 202 – Project 3"
