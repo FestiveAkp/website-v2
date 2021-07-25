@@ -10,17 +10,14 @@
                 <div class="bar h-2 w-40 rounded-sm bg-gray-600 hover:bg-gray-500" @click="() => jumpTo('#home')" />
                 <div class="bar h-2 w-28 rounded-sm bg-gray-600 hover:bg-gray-500 mt-2" @click="() => jumpTo('#projects')" />
             </div>
-            <div id="contact" class="absolute top-0 right-0 mt-6 mr-8">
-                <LinkButton title="Let's get in touch!" link="mailto:apilla20@uic.edu">Contact</LinkButton>
-            </div>
             <div>
                 <h1 id="name" class="text-5xl md:text-8xl font-fredoka-one text-primary tracking-wide">Akash Pillai</h1>
                 <div id="links" class="mt-12 flex justify-around">
                     <MediaButton title="GitHub" link="https://github.com/FestiveAkp">
                         <GithubIcon />
                     </MediaButton>
-                    <MediaButton title="CodeSandbox" link="https://codesandbox.io/u/FestiveAkp">
-                        <BracketsIcon />
+                    <MediaButton title="Let's get in touch!" link="mailto:akashp807@gmail.com">
+                        <EmailArrowIcon />
                     </MediaButton>
                     <MediaButton title="LinkedIn" link="https://www.linkedin.com/in/akash-pillai-/">
                         <LinkedInIcon />
@@ -148,7 +145,6 @@
             .from('#name', { duration: 0.75, x: -100, opacity: 0, ease: 'expo.out' })
             .from('#links', { duration: 0.75, x: -100, opacity: 0, ease: 'expo.out' }, '-=0.55')
             .from('.bar', { x: -200, ease: 'expo.out', stagger: .2 }, '-=0.45')
-            .from('#contact', { y: -200, ease: 'expo.out' }, '-=0.75')
             .from('#scroll-hint', { duration: 0.75, y: 50, opacity: 0, ease: 'expo.out' }, '-=0.4')
             .to('#down-arrow', { duration: 0.4, y: 10, ease: 'power4.in' }, '-=0.2')
             .to('#down-arrow', { duration: 0.5, y: 0, ease: 'expo.out' });
