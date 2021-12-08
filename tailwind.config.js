@@ -8,7 +8,7 @@ module.exports = {
                 'primary-bg': '#211D27'
             },
             fontFamily: {
-                'fredoka-one': ['Fredoka One', 'cursive'],
+                'fredoka-one': ['Fredoka One', 'sans-serif'],
             },
         },
     },
