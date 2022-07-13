@@ -5,10 +5,11 @@ module.exports = {
         extend: {
             colors: {
                 'primary': '#BB86FC',
-                'primary-bg': '#211D27'
+                'primary-bg': '#161118'
             },
             fontFamily: {
-                'fredoka-one': ['Fredoka One', 'sans-serif'],
+                'league-spartan': ['League Spartan', 'sans-serif'],
+                'inter': ['Inter', 'sans-serif'],
             },
         },
     },
