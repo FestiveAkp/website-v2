@@ -1,12 +1,13 @@
 {
   "name": "website-v2",
-  "version": "0.0.0",
+  "version": "2.3.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview"
   },
   "dependencies": {
+    "gsap": "^3.10.4",
     "pattern.css": "^1.0.0",
     "vue": "^3.0.5"
   },
