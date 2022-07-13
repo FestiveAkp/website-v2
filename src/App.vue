@@ -54,6 +54,7 @@
                     title="testfile.io"
                     tools="Clojure &ndash; Heroku"
                     description="Public API for retrieving dummy files of various sizes and filetypes for testing programs and networks."
+                    view="http://testfile.io/"
                     code="https://github.com/FestiveAkp/testfile.io"
                 />
                 <ProjectCard
