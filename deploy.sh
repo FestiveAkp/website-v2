@@ -5,7 +5,7 @@ set -e
 
 # build static assets
 rm -rf dist
-yarn build
+npm run build
 
 # write and stage files
 cd dist
