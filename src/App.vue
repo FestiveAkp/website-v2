@@ -10,10 +10,10 @@
                 <div class="bar h-2 w-40 rounded-sm bg-gray-600 hover:bg-gray-500" @click="() => jumpTo('#home')" />
                 <div class="bar h-2 w-28 rounded-sm bg-gray-600 hover:bg-gray-500 mt-2" @click="() => jumpTo('#projects')" />
             </div>
-            <div class="p-6">
+            <div class="p-8">
                 <h1 id="name" class="text-6xl md:text-8xl font-league-spartan font-semibold text-primary whitespace-nowrap">Akash Pillai</h1>
                 <h2 id="subtitle" class="text-3xl md:text-5xl font-league-spartan font-medium text-gray-500 mt-1">Software Engineer</h2>
-                <p id="description" class="text-gray-200 text-opacity-90 mt-8 max-w-xl">
+                <p id="description" class="text-gray-200 text-opacity-90 mt-8 max-w-xl" style="width:95%">
                     Hey! I'm based in Chicago and my focus is on creating things for the modern web. I recently graduated from the University of Illinois Chicago and am currently a software engineer at
                     <a href="https://sproutsocial.com/" class="hover:underline text-green-400">Sprout Social</a>.
                 </p>
@@ -29,11 +29,11 @@
                     </MediaButton>
                 </div>
             </div>
-            <div id="scroll-hint" class="absolute bottom-20 text-gray-300">
+            <button id="scroll-hint" class="absolute p-4 text-gray-300" style="bottom:7vh" @click="() => jumpTo('#projects')">
                 <svg id="down-arrow" style="width:24px;height:24px" viewBox="0 0 24 24">
                     <path fill="currentColor" d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
                 </svg>
-            </div>
+            </button>
         </div>
     </section>
 
