@@ -13,9 +13,9 @@
             <div class="p-8">
                 <h1 id="name" class="text-6xl md:text-8xl font-league-spartan font-semibold text-primary whitespace-nowrap">Akash Pillai</h1>
                 <h2 id="subtitle" class="text-3xl md:text-5xl font-league-spartan font-medium text-gray-500 mt-1">Software Engineer</h2>
-                <p id="description" class="text-gray-200 text-opacity-90 mt-8 max-w-xl" style="width:95%">
+                <p id="description" class="text-gray-200/90 mt-8 max-w-xl" style="width:95%">
                     Hey! I'm based in Chicago and my focus is on creating things for the modern web. I recently graduated from the University of Illinois Chicago and am currently a software engineer at
-                    <a href="https://sproutsocial.com/" class="hover:underline text-green-400">Sprout Social</a>.
+                    <a href="https://sproutsocial.com/" class="hover:underline text-emerald-400">Sprout Social</a>.
                 </p>
                 <div id="links" class="space-x-8 mt-12 border-t-2 border-gray-500 pt-2">
                     <MediaButton title="GitHub" link="https://github.com/FestiveAkp">
@@ -39,7 +39,7 @@
 
     <div class="pattern-cross-dots-sm h-8 text-gray-500" />
 
-    <section id="projects" class="text-gray-200 text-opacity-90 p-6 pt-14">
+    <section id="projects" class="text-gray-200/90 p-6 pt-14">
         <div class="max-w-3xl mx-auto">
             <h2 class="text-3xl md:text-4xl font-league-spartan font-semibold border-b-2 border-gray-500 pb-3">Featured Projects</h2>
             <div class="mt-8 flex flex-col justify-between space-y-8">
