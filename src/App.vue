@@ -61,7 +61,6 @@
                     title="splashpoll.app"
                     tools="React &ndash; Next.js &ndash; Chakra UI &ndash; Vercel"
                     description="A full stack poll web application where users can create realtime multiple choice or open ended polls."
-                    view="https://splashpoll.app/"
                     code="https://github.com/FestiveAkp/splashpoll.app"
                 />
                 <ProjectCard
