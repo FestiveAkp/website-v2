@@ -52,7 +52,7 @@
                 />
                 <ProjectCard
                     title="testfile.io"
-                    tools="Clojure &ndash; Heroku"
+                    tools="Clojure &ndash; Fly.io"
                     description="Public API for retrieving dummy files of various sizes and filetypes for testing programs and networks."
                     view="http://testfile.io/"
                     code="https://github.com/FestiveAkp/testfile.io"
