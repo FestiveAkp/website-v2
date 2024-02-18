@@ -14,7 +14,7 @@
                 <h1 id="name" class="text-6xl md:text-8xl font-league-spartan font-semibold text-primary whitespace-nowrap">Akash Pillai</h1>
                 <h2 id="subtitle" class="text-3xl md:text-5xl font-league-spartan font-medium text-gray-500 mt-1">Software Engineer</h2>
                 <p id="description" class="text-gray-200/90 mt-8 max-w-xl" style="width:95%">
-                    Hey! I'm based in Chicago and my focus is on creating things for the modern web. I recently graduated from the University of Illinois Chicago and am currently a software engineer at
+                    Hey! I'm based in Chicago and my focus is on creating things for the modern web. I am currently a software engineer at
                     <a href="https://sproutsocial.com/" class="hover:underline text-emerald-400">Sprout Social</a>.
                 </p>
                 <div id="links" class="space-x-8 mt-12 border-t-2 border-gray-500 pt-2">
@@ -54,7 +54,7 @@
                     title="testfile.io"
                     tools="Clojure &ndash; Fly.io"
                     description="Public API for retrieving dummy files of various sizes and filetypes for testing programs and networks."
-                    view="http://testfile.io/"
+                    view="http://testfile-io.fly.dev/"
                     code="https://github.com/FestiveAkp/testfile.io"
                 />
                 <ProjectCard
@@ -68,6 +68,13 @@
                     tools="JavaScript &ndash; Tailwind CSS &ndash; Laravel"
                     description="Designed, implemented, and contributed the official dark theme for the Laravel documentation website. Added theme switcher which selects between light, dark, and system color theme and saves the user's preference between visits."
                     view="https://laravel.com/docs/8.x"
+                />
+                <ProjectCard
+                    title="Smoke Detector Beeps"
+                    tools="HTML &ndash; Alpine.js"
+                    description="Simulate the comforting sounds of several low-battery smoke detectors."
+                    view="http://akash.dev/beeps/"
+                    code="https://github.com/FestiveAkp/beeps"
                 />
                 <ProjectCard
                     title="Personal Website v2"
