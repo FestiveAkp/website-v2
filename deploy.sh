@@ -18,6 +18,7 @@ This repo holds the static build output for my personal website, which is deploy
 You can find the actual source repo [here](https://github.com/FestiveAkp/website-v2).
 EOL
 
+git checkout -b master
 git add -A
 git commit -m "deploy: $(date +"%F %r")"
 
