@@ -10,6 +10,7 @@ npm run build
 # write and stage files
 cd dist
 git init
+touch .nojekyll
 echo "akash.dev" > CNAME
 
 cat << EOL > README.md
