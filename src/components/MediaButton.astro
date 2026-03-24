@@ -1,5 +1,6 @@
 ---
-const { title, link } = Astro.props;
+import { Icon } from 'astro-icon/components';
+const { title, link, icon } = Astro.props;
 ---
 <a
     class="inline-block rounded text-gray-500 px-2 py-2 hover:text-gray-400 focus:shadow-outline"
@@ -8,7 +9,5 @@ const { title, link } = Astro.props;
     target="_blank"
     rel="noopener noreferrer"
 >
-    <svg class="w-7" viewBox="0 0 24 24">
-        <slot />
-    </svg>
+    <Icon name={icon} class="w-7 h-7" />
 </a>

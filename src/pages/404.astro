@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Icon } from 'astro-icon/components';
+---
+<Layout
+    title="404 - Akash Pillai"
+    description="Page not found."
+    canonical="https://akash.dev/404"
+>
+    <section class="h-screen flex justify-center items-center">
+        <div class="px-6 max-w-3xl w-full mx-auto">
+            <h1 class="text-6xl md:text-8xl font-outfit font-semibold text-primary">404</h1>
+            <p class="md:text-lg text-gray-200/90 mt-6">This page doesn't exist.</p>
+            <div class="mt-8 border-t border-gray-700 pt-3">
+                <a href="/" class="inline-flex items-center gap-1 text-emerald-400 hover:underline">
+                    <Icon name="mdi:arrow-left" class="w-4 h-4" /> Go home
+                </a>
+            </div>
+        </div>
+    </section>
+</Layout>
