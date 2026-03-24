@@ -1,0 +1,94 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import Nav from '../components/Nav.astro';
+---
+<Layout
+    title="Projects - Akash Pillai"
+    description="All projects by Akash Pillai, a software engineer based in Chicago."
+    canonical="https://akash.dev/projects"
+>
+    <Nav showName />
+    <section class="text-gray-200/90 p-6 pt-16">
+        <div class="max-w-3xl mx-auto">
+            <h1 class="text-3xl md:text-4xl font-outfit font-semibold border-b border-gray-700 pb-3">All Projects</h1>
+            <div class="mt-8 flex flex-col justify-between space-y-8">
+                <ProjectCard
+                    title="AdventureList"
+                    tools="Laravel – React"
+                    description="A social travel diary to plan trips, log visits, and share adventures with friends."
+                    view="https://adventurelist.app"
+                    image="/adventurelist.png"
+                />
+                <ProjectCard
+                    title="testfile.io"
+                    tools="Clojure"
+                    description="Public API for retrieving dummy files of various sizes and filetypes for testing programs and networks."
+                    view="http://testfile-io.fly.dev/"
+                    code="https://github.com/FestiveAkp/testfile.io"
+                />
+                <ProjectCard
+                    title="Gradient Clock"
+                    tools="React – Next.js"
+                    description="A beautifully simple date and time display in front of a colorful moving gradient."
+                    view="https://akash.dev/clock/"
+                    code="https://github.com/FestiveAkp/clock"
+                />
+                <ProjectCard
+                    title="Smoke Detector Beeps"
+                    tools="HTML – Alpine.js"
+                    description="Simulate the comforting sounds of several low-battery smoke detectors."
+                    view="http://akash.dev/beeps/"
+                    code="https://github.com/FestiveAkp/beeps"
+                />
+                <ProjectCard
+                    title="splashpoll.app"
+                    tools="React – Next.js"
+                    description="A full stack poll web application where users can create realtime multiple choice or open ended polls."
+                    code="https://github.com/FestiveAkp/splashpoll.app"
+                />
+                <ProjectCard
+                    title="Dark Mode for Laravel Documentation"
+                    tools="JavaScript – Tailwind CSS"
+                    description="Designed and implemented the official dark theme for the Laravel documentation website, including a theme switcher with light, dark, and system preference options."
+                />
+                <ProjectCard
+                    title="Personal Website v2"
+                    tools="Astro – Tailwind CSS"
+                    description="This website. Fully redesigned with colors and buttons taken from the first iteration."
+                    view="https://akash.dev/"
+                    code="https://github.com/FestiveAkp/website-v2"
+                />
+                <ProjectCard
+                    title="AniList Tracker"
+                    tools="Python"
+                    description="A Twitter bot that fetches data from the AniList API daily and analyzes it, tracking changes in the rankings and tweeting out the results afterward."
+                    view="https://twitter.com/AnimeTrackerBot"
+                    code="https://github.com/FestiveAkp/animetracker"
+                />
+                <ProjectCard
+                    title="IT 202 – Project 3"
+                    tools="JavaScript – HTML Canvas"
+                    description="A vertical scrolling desktop game where you dodge incoming objects."
+                    view="https://akash.dev/it202-project3"
+                    code="https://github.com/FestiveAkp/it202-project3"
+                />
+                <ProjectCard
+                    title="Personal Website v1"
+                    tools="11ty – Tailwind CSS – Matter.js"
+                    description="The first iteration of my personal website."
+                    code="https://github.com/FestiveAkp/website"
+                />
+                <ProjectCard
+                    title="RPS"
+                    tools="JavaScript – Skeleton CSS"
+                    description="My first coding project, play rock-paper-scissors against the computer."
+                    view="https://akash.dev/rps/"
+                    code="https://github.com/FestiveAkp/rps"
+                />
+            </div>
+        </div>
+    </section>
+
+    <footer class="h-2 bg-primary mt-24"></footer>
+</Layout>

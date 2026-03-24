@@ -8,8 +8,8 @@ import { Icon } from 'astro-icon/components';
     <section id="home" class="h-screen relative flex justify-center items-center">
         <div id="animated" class="flex justify-center">
             <div class="absolute lg:fixed top-0 left-0 mt-6 ml-8">
-                <div class="bar h-2 w-40 rounded-sm bg-gray-600 hover:bg-gray-500" id="bar-home"></div>
-                <div class="bar h-2 w-28 rounded-sm bg-gray-600 hover:bg-gray-500 mt-2" id="bar-projects"></div>
+                <div class="h-2 w-40 rounded-sm bg-gray-600 hover:bg-gray-500 cursor-pointer" id="bar-home"></div>
+                <div class="h-2 w-28 rounded-sm bg-gray-600 hover:bg-gray-500 cursor-pointer mt-2" id="bar-projects"></div>
             </div>
             <div id="content" class="px-6 max-w-3xl w-full mx-auto">
                 <h1 class="text-6xl md:text-8xl font-outfit font-semibold text-primary whitespace-nowrap">Akash Pillai</h1>
@@ -43,13 +43,6 @@ import { Icon } from 'astro-icon/components';
                     image="/adventurelist.png"
                 />
                 <ProjectCard
-                    title="Gradient Clock"
-                    tools="React – Next.js"
-                    description="A beautifully simple date and time display in front of a colorful moving gradient."
-                    view="https://akash.dev/clock/"
-                    code="https://github.com/FestiveAkp/clock"
-                />
-                <ProjectCard
                     title="testfile.io"
                     tools="Clojure"
                     description="Public API for retrieving dummy files of various sizes and filetypes for testing programs and networks."
@@ -57,16 +50,11 @@ import { Icon } from 'astro-icon/components';
                     code="https://github.com/FestiveAkp/testfile.io"
                 />
                 <ProjectCard
-                    title="splashpoll.app"
+                    title="Gradient Clock"
                     tools="React – Next.js"
-                    description="A full stack poll web application where users can create realtime multiple choice or open ended polls."
-                    code="https://github.com/FestiveAkp/splashpoll.app"
-                />
-                <ProjectCard
-                    title="Dark Mode for Laravel Documentation"
-                    tools="JavaScript – Tailwind CSS"
-                    description="Designed, implemented, and contributed the official dark theme for the Laravel documentation website. Added theme switcher which selects between light, dark, and system color theme and saves the user's preference between visits."
-                    view="https://laravel.com/docs/8.x"
+                    description="A beautifully simple date and time display in front of a colorful moving gradient."
+                    view="https://akash.dev/clock/"
+                    code="https://github.com/FestiveAkp/clock"
                 />
                 <ProjectCard
                     title="Smoke Detector Beeps"
@@ -75,40 +63,11 @@ import { Icon } from 'astro-icon/components';
                     view="http://akash.dev/beeps/"
                     code="https://github.com/FestiveAkp/beeps"
                 />
-                <ProjectCard
-                    title="Personal Website v2"
-                    tools="Astro – Tailwind CSS"
-                    description="This website. Fully redesigned with colors and buttons taken from the first iteration."
-                    view="https://akash.dev/"
-                    code="https://github.com/FestiveAkp/website-v2"
-                />
-                <ProjectCard
-                    title="AniList Tracker"
-                    tools="Python"
-                    description="A Twitter bot that fetches data from the AniList API daily and analyzes it, tracking changes in the rankings and tweeting out the results afterward."
-                    view="https://twitter.com/AnimeTrackerBot"
-                    code="https://github.com/FestiveAkp/animetracker"
-                />
-                <ProjectCard
-                    title="IT 202 – Project 3"
-                    tools="JavaScript – HTML Canvas"
-                    description="A vertical scrolling desktop game where you dodge incoming objects."
-                    view="https://akash.dev/it202-project3"
-                    code="https://github.com/FestiveAkp/it202-project3"
-                />
-                <ProjectCard
-                    title="Personal Website v1"
-                    tools="11ty – Tailwind CSS – Matter.js"
-                    description="The first iteration of my personal website."
-                    code="https://github.com/FestiveAkp/website"
-                />
-                <ProjectCard
-                    title="RPS"
-                    tools="JavaScript – Skeleton CSS"
-                    description="My first coding project, play rock-paper-scissors against the computer."
-                    view="https://akash.dev/rps/"
-                    code="https://github.com/FestiveAkp/rps"
-                />
+            </div>
+            <div class="mt-10 border-t border-gray-700 pt-6">
+                <a href="/projects" class="inline-flex items-center gap-1 text-emerald-400 hover:underline">
+                    See all projects <Icon name="mdi:arrow-right" class="w-4 h-4" />
+                </a>
             </div>
         </div>
     </section>
@@ -120,7 +79,7 @@ import { Icon } from 'astro-icon/components';
     const jumpTo = (elem: string) => document.querySelector(elem)!.scrollIntoView({ behavior: 'smooth' });
 
     document.getElementById('bar-home')!.addEventListener('click', () => jumpTo('#home'));
-    document.getElementById('bar-projects')!.addEventListener('click', () => jumpTo('#projects'));
+    document.getElementById('bar-projects')!.addEventListener('click', () => window.location.href = '/projects');
     document.getElementById('scroll-hint')!.addEventListener('click', () => jumpTo('#projects'));
 </script>
 
@@ -140,8 +99,8 @@ import { Icon } from 'astro-icon/components';
         to { transform: translateY(0); opacity: 1; }
     }
 
-    #content     { animation: slideIn    0.75s cubic-bezier(0.16, 1, 0.3, 1) 0s    both; }
-    #bar-home    { animation: slideInBar 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both; }
-    #bar-projects{ animation: slideInBar 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both; }
-    #scroll-hint { animation: slideUp    0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.50s both; }
+    #content      { animation: slideIn    0.75s cubic-bezier(0.16, 1, 0.3, 1) 0s     both; }
+    #bar-home     { animation: slideInBar 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.15s  both; }
+    #bar-projects { animation: slideInBar 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.25s  both; }
+    #scroll-hint  { animation: slideUp    0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.50s  both; }
 </style>

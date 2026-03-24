@@ -1,0 +1,38 @@
+---
+const { showName = false, animate = false } = Astro.props;
+const path = Astro.url.pathname;
+const isHome = path === '/';
+const isProjects = path === '/projects' || path === '/projects/';
+---
+<nav class={`px-6 h-16 ${animate ? 'nav-animate' : ''}`}>
+    <div class="max-w-3xl mx-auto h-full flex items-center gap-8">
+        {showName && (
+            <a href="/" class="font-outfit font-semibold text-2xl text-primary hover:opacity-80 transition-opacity mr-2">
+                Akash Pillai
+            </a>
+        )}
+        <a
+            href="/"
+            class={`text-base font-semibold transition-colors hover:text-gray-200 ${isHome ? 'text-gray-200' : 'text-gray-500'}`}
+        >
+            Home
+        </a>
+        <a
+            href="/projects"
+            class={`text-base font-semibold transition-colors hover:text-gray-200 ${isProjects ? 'text-gray-200' : 'text-gray-500'}`}
+        >
+            Projects
+        </a>
+    </div>
+</nav>
+
+<style>
+    @keyframes slideDown {
+        from { transform: translateY(-24px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+
+    .nav-animate {
+        animation: slideDown 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+    }
+</style>
