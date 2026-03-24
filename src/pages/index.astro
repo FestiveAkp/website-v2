@@ -5,29 +5,21 @@ import MediaButton from '../components/MediaButton.astro';
 ---
 <Layout>
     <section id="home" class="h-screen relative flex justify-center items-center">
-        <div class="loading absolute flex space-x-4">
-            <div id="loading-1" class="h-3 w-3 rounded-sm bg-gray-600"></div>
-            <div id="loading-2" class="h-3 w-3 rounded-sm bg-gray-600"></div>
-            <div id="loading-3" class="h-3 w-3 rounded-sm bg-gray-600"></div>
-        </div>
-        <div id="animated" class="invisible flex justify-center">
+        <div id="animated" class="flex justify-center">
             <div class="absolute lg:fixed top-0 left-0 mt-6 ml-8">
                 <div class="bar h-2 w-40 rounded-sm bg-gray-600 hover:bg-gray-500" id="bar-home"></div>
                 <div class="bar h-2 w-28 rounded-sm bg-gray-600 hover:bg-gray-500 mt-2" id="bar-projects"></div>
             </div>
-            <div class="p-8">
-                <h1 id="name" class="text-6xl md:text-8xl font-league-spartan font-semibold text-primary whitespace-nowrap">Akash Pillai</h1>
-                <h2 id="subtitle" class="text-3xl md:text-5xl font-league-spartan font-medium text-gray-500 mt-1">Software Engineer</h2>
-                <p id="description" class="text-gray-200/90 mt-8 max-w-xl" style="width:95%">
-                    Hey! I'm based in Chicago and my focus is on creating things for the modern web. I am currently a software engineer at
+            <div id="content" class="px-6 max-w-3xl w-full mx-auto">
+                <h1 class="text-6xl md:text-8xl font-league-spartan font-semibold text-primary whitespace-nowrap">Akash Pillai</h1>
+                <h2 class="text-3xl md:text-5xl font-league-spartan font-light text-gray-500 mt-2">Software Engineer</h2>
+                <p class="md:text-lg text-gray-200/90 mt-6">
+                    Hey! I'm based in Chicago and I create things for the modern web. I am currently a software engineer at
                     <a href="https://sproutsocial.com/" class="hover:underline text-emerald-400">Sprout Social</a>.
                 </p>
-                <div id="links" class="space-x-8 mt-12 border-t-2 border-gray-500 pt-2">
+                <div class="space-x-6 mt-8 border-t border-gray-700 pt-3">
                     <MediaButton title="GitHub" link="https://github.com/FestiveAkp">
                         <path fill="currentColor" d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
-                    </MediaButton>
-                    <MediaButton title="Let's get in touch!" link="mailto:akashp807@gmail.com">
-                        <path fill="currentColor" d="M13 17H17V14L22 18.5L17 23V20H13V17M20 4H4A2 2 0 0 0 2 6V18A2 2 0 0 0 4 20H11V18H4V8L12 13L20 8V14H22V6A2 2 0 0 0 20 4M12 11L4 6H20Z" />
                     </MediaButton>
                     <MediaButton title="LinkedIn" link="https://www.linkedin.com/in/akash-pillai-/">
                         <path fill="currentColor" d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z" />
@@ -46,38 +38,38 @@ import MediaButton from '../components/MediaButton.astro';
 
     <section id="projects" class="text-gray-200/90 p-6 pt-14">
         <div class="max-w-3xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-league-spartan font-semibold border-b-2 border-gray-500 pb-3">Featured Projects</h2>
+            <h2 class="text-3xl md:text-4xl font-league-spartan font-semibold border-b border-gray-700 pb-3">Featured Projects</h2>
             <div class="mt-8 flex flex-col justify-between space-y-8">
                 <ProjectCard
                     title="AdventureList"
-                    tools="Laravel – Livewire"
+                    tools="Laravel – React"
                     description="A social travel diary to plan trips, log visits, and share adventures with friends."
                     view="https://adventurelist.app"
                     image="/adventurelist.png"
                 />
                 <ProjectCard
                     title="Gradient Clock"
-                    tools="React – Next.js – Granim.js – Chakra UI – GitHub Pages"
+                    tools="React – Next.js"
                     description="A beautifully simple date and time display in front of a colorful moving gradient."
                     view="https://akash.dev/clock/"
                     code="https://github.com/FestiveAkp/clock"
                 />
                 <ProjectCard
                     title="testfile.io"
-                    tools="Clojure – Fly.io"
+                    tools="Clojure"
                     description="Public API for retrieving dummy files of various sizes and filetypes for testing programs and networks."
                     view="http://testfile-io.fly.dev/"
                     code="https://github.com/FestiveAkp/testfile.io"
                 />
                 <ProjectCard
                     title="splashpoll.app"
-                    tools="React – Next.js – Chakra UI – Vercel"
+                    tools="React – Next.js"
                     description="A full stack poll web application where users can create realtime multiple choice or open ended polls."
                     code="https://github.com/FestiveAkp/splashpoll.app"
                 />
                 <ProjectCard
                     title="Dark Mode for Laravel Documentation"
-                    tools="JavaScript – Tailwind CSS – Laravel"
+                    tools="JavaScript – Tailwind CSS"
                     description="Designed, implemented, and contributed the official dark theme for the Laravel documentation website. Added theme switcher which selects between light, dark, and system color theme and saves the user's preference between visits."
                     view="https://laravel.com/docs/8.x"
                 />
@@ -90,14 +82,14 @@ import MediaButton from '../components/MediaButton.astro';
                 />
                 <ProjectCard
                     title="Personal Website v2"
-                    tools="Astro – GSAP – Tailwind CSS"
+                    tools="Astro – Tailwind CSS"
                     description="This website. Fully redesigned with colors and buttons taken from the first iteration."
                     view="https://akash.dev/"
                     code="https://github.com/FestiveAkp/website-v2"
                 />
                 <ProjectCard
                     title="AniList Tracker"
-                    tools="Python – DigitalOcean"
+                    tools="Python"
                     description="A Twitter bot that fetches data from the AniList API daily and analyzes it, tracking changes in the rankings and tweeting out the results afterward."
                     view="https://twitter.com/AnimeTrackerBot"
                     code="https://github.com/FestiveAkp/animetracker"
@@ -111,7 +103,7 @@ import MediaButton from '../components/MediaButton.astro';
                 />
                 <ProjectCard
                     title="Personal Website v1"
-                    tools="11ty – Handlebars – Tailwind CSS – Matter.js"
+                    tools="11ty – Tailwind CSS – Matter.js"
                     description="The first iteration of my personal website."
                     code="https://github.com/FestiveAkp/website"
                 />
@@ -130,59 +122,31 @@ import MediaButton from '../components/MediaButton.astro';
 </Layout>
 
 <script>
-    import { gsap } from 'gsap';
-
     const jumpTo = (elem: string) => document.querySelector(elem)!.scrollIntoView({ behavior: 'smooth' });
 
     document.getElementById('bar-home')!.addEventListener('click', () => jumpTo('#home'));
     document.getElementById('bar-projects')!.addEventListener('click', () => jumpTo('#projects'));
     document.getElementById('scroll-hint')!.addEventListener('click', () => jumpTo('#projects'));
-
-    const startLoading = () => {
-        const distance = 7;
-        const duration = 0.2;
-        const ease = 'power2.out';
-        gsap.timeline({ repeat: -1 })
-            .to('#loading-1', { duration, y: -distance, ease })
-            .to('#loading-1', { duration, y: 0, ease })
-            .to('#loading-2', { duration, y: -distance, ease })
-            .to('#loading-2', { duration, y: 0, ease })
-            .to('#loading-3', { duration, y: -distance, ease })
-            .to('#loading-3', { duration, y: 0, ease });
-    };
-
-    const stopLoading = () => {
-        gsap.to('.loading', { duration: 0.4, opacity: 0 });
-        setTimeout(() => {
-            document.querySelector('.loading')?.remove();
-        }, 3000);
-    };
-
-    const animate = () => {
-        gsap.timeline()
-            .from('#animated', { autoAlpha: 0 })
-            .from('#name', { duration: 0.75, x: -100, opacity: 0, ease: 'expo.out' })
-            .from('#subtitle', { duration: 0.75, x: -100, opacity: 0, ease: 'expo.out' }, '-=0.60')
-            .from('#description', { duration: 0.75, x: -100, opacity: 0, ease: 'expo.out' }, '-=0.55')
-            .from('#links', { duration: 0.75, x: -100, opacity: 0, ease: 'expo.out' }, '-=0.65')
-            .from('.bar', { x: -200, ease: 'expo.out', stagger: .2 }, '-=0.5')
-            .from('#scroll-hint', { duration: 0.75, y: 50, opacity: 0, ease: 'expo.out' }, '-=0.5')
-            .to('#down-arrow', { duration: 0.4, y: 10, ease: 'power4.in' }, '-=0.3')
-            .to('#down-arrow', { duration: 0.4, y: 0, ease: 'expo.out' });
-    };
-
-    const show = () => {
-        gsap.from('#animated', { autoAlpha: 0 });
-    };
-
-    window.addEventListener('load', () => {
-        stopLoading();
-        if (window.scrollY === 0) {
-            animate();
-        } else {
-            show();
-        }
-    });
-
-    startLoading();
 </script>
+
+<style is:global>
+    @keyframes slideIn {
+        from { transform: translateX(-100px); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+    }
+
+    @keyframes slideInBar {
+        from { transform: translateX(-200px); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+    }
+
+    @keyframes slideUp {
+        from { transform: translateY(50px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+
+    #content     { animation: slideIn    0.75s cubic-bezier(0.16, 1, 0.3, 1) 0s    both; }
+    #bar-home    { animation: slideInBar 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both; }
+    #bar-projects{ animation: slideInBar 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both; }
+    #scroll-hint { animation: slideUp    0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.50s both; }
+</style>
