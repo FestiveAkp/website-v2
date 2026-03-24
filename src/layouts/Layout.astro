@@ -1,10 +1,13 @@
+---
+import '../styles/global.css';
+---
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Akash Pillai - Software Engineer</title>
-        <meta name="description" content="Akash Pillai is a software engineer based in Chicago who specializes in developing things for the web." />
+        <meta name="description" content="Akash Pillai is a software engineer based in Chicago who specializes in building things for the web." />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -14,7 +17,6 @@
         <script defer data-domain="akash.dev" src="https://plausible.io/js/plausible.js"></script>
     </head>
     <body class="bg-primary-bg font-inter">
-        <div id="app"></div>
-        <script type="module" src="/src/main.js"></script>
+        <slot />
     </body>
 </html>

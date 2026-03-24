@@ -1,0 +1,9 @@
+@import 'pattern.css/dist/pattern.min.css';
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #BB86FC;
+    --color-primary-bg: #161118;
+    --font-league-spartan: 'League Spartan', sans-serif;
+    --font-inter: 'Inter', sans-serif;
+}

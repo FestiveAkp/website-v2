@@ -1,0 +1,29 @@
+---
+const { title, tools, description, view, code, image } = Astro.props;
+const href = view || code;
+---
+<div>
+    <div class={image ? 'flex gap-4 items-start' : ''}>
+        {image && (
+            <a href={href} target="_blank" rel="noopener noreferrer" class="flex-shrink-0">
+                <img src={image} alt={title} class="w-44 h-24 object-cover object-top rounded border border-gray-700" />
+            </a>
+        )}
+        <div>
+            <header>
+                <h3 class="text-lg font-semibold">
+                    <a href={href} class="hover:underline">{title}</a>
+                </h3>
+                <h4 class="text-sm text-gray-400/80">{tools}</h4>
+            </header>
+            <p class="my-3">{description}</p>
+            {(view || code) && (
+                <footer class="text-sm">
+                    {view && <a href={view} class="text-emerald-400 hover:underline">View Project</a>}
+                    {view && code && <span>&nbsp;&ndash;&nbsp;</span>}
+                    {code && <a href={code} class="text-emerald-400 hover:underline">Source Code</a>}
+                </footer>
+            )}
+        </div>
+    </div>
+</div>

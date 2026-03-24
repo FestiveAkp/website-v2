@@ -1,0 +1,14 @@
+---
+const { title, link } = Astro.props;
+---
+<a
+    class="inline-block rounded text-gray-500 px-2 py-2 hover:text-gray-400 focus:shadow-outline"
+    href={link}
+    title={title}
+    target="_blank"
+    rel="noopener noreferrer"
+>
+    <svg class="w-7" viewBox="0 0 24 24">
+        <slot />
+    </svg>
+</a>
