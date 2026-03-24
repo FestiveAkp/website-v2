@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { Font } from 'astro:assets';
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -11,9 +12,8 @@ import '../styles/global.css';
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&family=Outfit:wght@300;600&display=swap">
+        <Font cssVariable="--font-inter" preload />
+        <Font cssVariable="--font-outfit" preload />
         <script defer data-domain="akash.dev" src="https://plausible.io/js/plausible.js"></script>
     </head>
     <body class="bg-primary-bg font-inter">
